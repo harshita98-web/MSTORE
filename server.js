@@ -8,8 +8,8 @@ app.use(express.static(__dirname + '/dist/ecom-project'));
 
   app.use(cors());
   
-const connection = mysql.createConnection({
-    // connectionLimit : 50,
+const connection = mysql.createPool({
+    connectionLimit : 100,
     host: '127.0.0.1',
     user: 'root',
     password: '',
