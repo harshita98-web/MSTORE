@@ -76,9 +76,9 @@ app.get('/api/subcategory/:catid' , (req,resp) => {
 
 
 
-  app.listen(3000, () => {
-    console.log('Server is running at port 3000');
-});
+//   app.listen(3000, () => {
+//     console.log('Server is running at port 3000');
+// });
 
 app.all('*', (req, res) => {
   res.status(200).sendFile(__dirname + '/dist/index.html');
