@@ -18,13 +18,13 @@ export class ProductsComponent implements OnInit {
     this.activatedroute.paramMap.subscribe(p => {
       let catid = parseInt(p.get('id'),10);
       console.log(catid);
-      this.http.get(`http://localhost:3000/api/categorywise/${catid}`).subscribe(
+      this.http.get(`/api/categorywise/${catid}`).subscribe(
         resp => {
           this.productlists$ = resp;
         }
       ),
   
-    this.http.get(`http://localhost:3000/api/subcategory/${catid}`).subscribe(
+    this.http.get(`/api/subcategory/${catid}`).subscribe(
         response => {
           this.subcategories$ = response;
         }
