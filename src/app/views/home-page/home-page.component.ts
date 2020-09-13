@@ -36,7 +36,7 @@ export class HomePageComponent implements OnInit {
   }
 
   categorywise(name) {
-    this.http.get(/api/categorywise/${name}`).subscribe(
+    this.http.get(`/api/categorywise/${name}`).subscribe(
       resp => {
         this.categoryproucts$ = resp;
         console.log(this.categoryproucts$);
