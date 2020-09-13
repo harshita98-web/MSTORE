@@ -10,9 +10,9 @@ app.use(express.static(__dirname + '/dist/ecom-project'));
   
 const connection = mysql.createConnection({
     // connectionLimit : 50,
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'bdbd9d8fe0c096',
+    password: 'b82561c2',
     database: 'ecommerce'
   });
 
