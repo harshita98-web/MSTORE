@@ -21,12 +21,12 @@ export class HomePageComponent implements OnInit {
     private router : Router
     )
      {
-    this.http.get('http://localhost:3000/api/productslist').subscribe(
+    this.http.get('/api/productslist').subscribe(
       resp => {
         this.productlist$ = resp;
       }
     ),
-      this.http.get('http://localhost:3000/api/products').subscribe(
+      this.http.get('/api/products').subscribe(
         (response: []) => {
           let products$ = response;
           const shuffled = products$.sort(() => 0.5 - Math.random());
@@ -36,7 +36,7 @@ export class HomePageComponent implements OnInit {
   }
 
   categorywise(name) {
-    this.http.get(`http://localhost:3000/api/categorywise/${name}`).subscribe(
+    this.http.get(/api/categorywise/${name}`).subscribe(
       resp => {
         this.categoryproucts$ = resp;
         console.log(this.categoryproucts$);
