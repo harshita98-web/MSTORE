@@ -1,0 +1,37 @@
+<div class="homepage">
+    <div class="catlist">
+        <div class="singlecategory" *ngFor="let t of productlist$">
+            <div (click)="openCatProducts(t.id)"><img class="cat_img" src="assets\category\{{t.img}}.jpg" alt="t.img"> </div>
+            <span class="catname">{{t.name}} </span>
+        </div>
+    </div>
+    <div class="discount">
+        <h1>Discount Upto 30% Avail The Offer Now</h1>
+          <img src="assets/deliveryimage.svg" alt="">
+          
+    </div>
+
+    <div class="uploadimage">
+        <img src="assets/uploadimage.svg" alt="">
+        <h1> Tired of finding and adding it to cart Upload Your Rashan List and get delivered at your home </h1>
+    </div>
+    <div class="productlist">
+        <div class="product" *ngFor="let t of productlists$">
+            <div class="productinside">
+            <div class="product_img">
+                <h3 class="discountstar">10% OFF</h3>
+                <img class="cat_img" src="assets/product_images/{{t.Product_Name}}.jpg" alt="">
+            </div>
+            <h1> &#8377; {{t.MRP}}</h1>
+            <h3>{{t.Product_Name}}</h3>
+            <h3>{{t.Qty}}</h3>
+            <div class="addtocart">
+                <button mat-flat-button color="primary">Add To Cart</button>
+                <button mat-mini-fab color="primary">
+                    <mat-icon>add</mat-icon>
+                  </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

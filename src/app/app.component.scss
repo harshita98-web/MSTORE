@@ -1,0 +1,89 @@
+// For Common 
+    $searchboxcolor : white;
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(10 171 104 / 87%);;
+  align-items: center;
+}
+.navbar {
+  transform: scale(1) rotate(0.1deg);
+  align-self: center;
+  cursor: pointer;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.signin{
+  cursor: pointer;
+}
+.logo img {
+  // width: 20vw;
+  height: 5vh;
+}
+.mainlogo {
+  visibility: hidden;
+}
+.signin img {
+  height: 5vh;
+}
+.cart img {
+  height: 5vh;
+}
+.counter {
+  border-radius: 50%;
+  position: absolute;
+  background-color: darkblue;
+  height: 20px;
+  width: 20px;
+  margin-left: -22px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+.search{
+    display: flex;
+    background-color: $searchboxcolor;
+    width: 200px;
+}
+
+input{
+    border-style: none;
+   }
+     input:focus{
+         border-style: none;
+         outline-style: none;
+     }
+
+//   For Large DEvice
+
+@media (min-width: 700px) {
+  .secondlogo {
+    visibility: hidden;
+  }
+  .mainlogo {
+    visibility: visible;
+    height: 20vh !important;
+  }
+  .signin img, .cart img {
+    height: 8vh !important;
+  }
+  .search{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-gap: 10px;
+    background-color: $searchboxcolor;
+    width: 400px;
+    place-items: center;
+}
+  .searchbox{
+    font-size: x-large;
+  }
+}
+// ::ng-deep .mat-dialog-container {
+//   margin-left: 35rem;
+// }
+// For Smaller device 

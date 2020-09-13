@@ -1,0 +1,42 @@
+<div class="header">
+    <div class="logo" (click)="openHomePage()">
+        <img class="secondlogo" src="assets\mmm.jpg" alt="MStore">
+        <img class="mainlogo" src="assets\logo.png" alt="MStore">
+    </div>
+    
+    <div class="search">
+        <mat-icon>search</mat-icon>
+        <input class="searchbox" type="text" placeholder=" Search For Products        "> 
+        </div>
+    <div class="signin" (click)="login()">
+        <img src="assets\man.svg" alt="signin">
+        <!-- <p>Sign In / Up</p> -->
+    </div>
+    <div class="cart">
+        <img src="assets\shopping-cart.svg" alt="cart">
+        <span class="counter">1</span>
+        <!-- <p>My Cart</p> -->
+    </div>
+    <!-- <div class="navbar">
+        
+     </div> -->
+    
+</div>
+ 
+    
+    <!-- <div class="footer">
+      <h2>  © M'Store India Pvt. Ltd., 2016-2019 </h2>
+    </div> -->
+<router-outlet>
+    <!-- <app-home-page> </app-home-page> -->
+    <!-- <app-products></app-products> -->
+</router-outlet>
+<!-- .counter {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    transform: translate(2.1rem, -0.70rem);
+  } -->

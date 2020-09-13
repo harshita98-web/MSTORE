@@ -1,0 +1,33 @@
+<div class="catimage">
+    <img src="assets/personalcare.png" alt="">
+</div>
+<div class="productpage">
+
+    <div class="subcategory">
+        <h3 *ngFor="let t of subcategories$"> <mat-checkbox> {{t.name}} </mat-checkbox></h3>
+    </div>
+
+    <div class="scrollitem">
+        <div class="item">
+            <div class="product" *ngFor="let t of productlists$">
+                <div class="productinside">
+                    <div class="product_img">
+                        <h3 class="discountstar">10% OFF</h3>
+                        <img class="cat_img" src="assets/product_images/{{t.Product_Name}}.jpg" alt="">
+                    </div>
+                    <div class="mobilegrid">
+                    <h3> &#8377; {{t.MRP}}</h3>
+                    <h3>{{t.Product_Name}}</h3>
+                    <h4>{{t.Qty}}</h4>
+                    <div class="addtocart">
+                        <button mat-flat-button color="primary">Add To Cart</button>
+                        <button mat-mini-fab color="primary">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
