@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'ecommerce'
+    database: 'heroku_c0acbdb4873c8f2'
   });
 
   app.get('/api/productslist' , (req,resp) => {
