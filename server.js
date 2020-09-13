@@ -20,7 +20,6 @@ const pool = mysql.createPool({
 app.get('/api/productslist', (req, resp) => {
   pool.getConnection(function (err, connection) {
     if (err) {
-      connection.release();
       console.log('error occures solve it please');
     }
     else {
@@ -41,7 +40,6 @@ app.get('/api/categorywise/:id', (req, resp) => {
   // resp.send(name);
   pool.getConnection(function (err, connection) {
     if (err) {
-      connection.release();
       console.log('error occures solve it please');
     }
     else {
@@ -60,7 +58,6 @@ app.get('/api/categorywise/:id', (req, resp) => {
 app.get('/api/products', (req, resp) => {
   pool.getConnection(function (err, connection) {
     if (err) {
-      connection.release();
       console.log('error occures solve it please');
     }
     else {
@@ -80,7 +77,6 @@ app.get('/api/subcategory/:catid', (req, resp) => {
   let catid = parseInt(req.params.catid);
   pool.getConnection(function (err, connection) {
     if (err) {
-      connection.release();
       console.log('error occures solve it please');
     }
     else {
