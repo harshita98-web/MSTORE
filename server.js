@@ -10,10 +10,10 @@ app.use(express.static(__dirname + '/dist/ecom-project'));
   
 const pool = mysql.createPool({
     connectionLimit : 100,
-    host: '127.0.0.1',
-    user: 'root',
-    password: '',
-    database: 'ecommerce',
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'bfddcdbeddef7b',
+    password: 'a2f0adb7',
+    database: 'heroku_adc9e4336121f32',
     port:'3306'
   });
 
