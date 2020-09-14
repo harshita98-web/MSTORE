@@ -13,7 +13,8 @@ const pool = mysql.createPool({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'heroku_c0acbdb4873c8f2'
+    database: 'heroku_c0acbdb4873c8f2',
+    port:'3306'
   });
 
   
