@@ -20,7 +20,7 @@ const pool = mysql.createPool({
 app.get('/api/productslist', (req, resp) => {
   pool.getConnection(function (err, connection) {
     if (err) {
-      console.log('error occures solve it please');
+      console.log('error occures solve it please',err);
     }
     else {
       connection.query(`Select * from category`, (error, rows, fields) => {
@@ -40,7 +40,7 @@ app.get('/api/categorywise/:id', (req, resp) => {
   // resp.send(name);
   pool.getConnection(function (err, connection) {
     if (err) {
-      console.log('error occures solve it please');
+      console.log('error occures solve it please' ,err);
     }
     else {
       connection.query(`Select * from products WHERE id = ${id}`, (error, rows, fields) => {
@@ -58,7 +58,7 @@ app.get('/api/categorywise/:id', (req, resp) => {
 app.get('/api/products', (req, resp) => {
   pool.getConnection(function (err, connection) {
     if (err) {
-      console.log('error occures solve it please');
+      console.log('error occures solve it please',err);
     }
     else {
       connection.query(`Select * from product_listing`, (error, rows, fields) => {
@@ -77,7 +77,7 @@ app.get('/api/subcategory/:catid', (req, resp) => {
   let catid = parseInt(req.params.catid);
   pool.getConnection(function (err, connection) {
     if (err) {
-      console.log('error occures solve it please');
+      console.log('error occures solve it please',err);
     }
     else {
       connection.query(`Select * from sub_category WHERE category_id = ${catid}`, (error, rows, fields) => {
